@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { Context, Context2 } from './ContextPratice'
+import First from './First'
+import Secound from './Secound'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Context.Provider value="utsav kumar jha">
+        <Context2.Provider value="delhi">
+       <First/>
+       <Secound/>
+       </Context2.Provider>
+      </Context.Provider>
+    )
+  }
 }
-
-export default App;
